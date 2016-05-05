@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # 
 # tournament.py -- implementation of a Swiss-system tournament
-#
+# Note: looked at code from username "victron" to guide me through this exercise and this forum post: https://discussions.udacity.com/t/lesson-5-my-code-does-not-pass-test-8/30422
 
 import psycopg2
 import bleach
@@ -126,5 +126,5 @@ def swissPairings():
         f.append(m)
         x  =x+2
         a=a+1
-
+    print f
 
