@@ -71,7 +71,7 @@ def playerStandings():
                    "count((select match_results.winner from match_results where match_results.winner = players.id)) as win, "
                    "count(match_results.winner ) as games "
                    "from players  left join match_results on "
-                   "players.id= match_results.winner or players.id = match_results.loser  group by players.id" sort by win)
+                   "players.id= match_results.winner or players.id = match_results.loser  group by players.id order by win asc" )
     results = cur.fetchall()
     DB.close()
     return results
